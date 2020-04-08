@@ -39,7 +39,7 @@ func TestEndToEnd_MinimalConfig(t *testing.T) {
 			ev.FinalizationOccurs,
 		},
 	}
-	if err := e2eParams.Init(4); err != nil {
+	if err := e2eParams.Init(1); err != nil {
 		t.Fatal(err)
 	}
 
