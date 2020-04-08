@@ -30,8 +30,9 @@ func TestEndToEnd_MinimalConfig(t *testing.T) {
 		BeaconFlags:    []string{"--minimal-config", "--custom-genesis-delay=10"},
 		ValidatorFlags: []string{"--minimal-config"},
 		EpochsToRun:    uint64(epochsToRun),
-		TestSync:       true,
-		TestSlasher:    true,
+		// Disabling until nodes can peer.
+		TestSync:    false,
+		TestSlasher: true,
 		Evaluators: []types.Evaluator{
 			ev.PeersConnect,
 			ev.ValidatorsAreActive,
